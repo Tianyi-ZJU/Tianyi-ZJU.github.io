@@ -44,6 +44,8 @@ plugins:
       repository: squidfunk/mkdocs-material
       branch: main
       enabled: !ENV [CI, false]
+  - search
+  - mermaid2
 markdown_extensions:
   - toc:
       permalink: true
