@@ -19,8 +19,6 @@ theme:
   language: zh
 
   palette:
-    #primary: blue grey
-
     - media: "(prefers-color-scheme: light)"
       scheme: default # 日间模式
       primary: indig  # 上方的
