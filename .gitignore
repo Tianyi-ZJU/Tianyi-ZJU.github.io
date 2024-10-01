@@ -6,3 +6,5 @@ docs/.obsidian/core-plugins-migration.json
 docs/.obsidian/appearance.json
 docs/.obsidian/app.json
 .DS_Store
+*.json
+*.canvas
