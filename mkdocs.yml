@@ -38,14 +38,14 @@ theme:
     repo: fontawesome/brands/git-alt
 
 plugins:
+  - search
+  - mermaid2
   - git-revision-date-localized:
       enable_creation_date: true
   - git-committers:
       repository: squidfunk/mkdocs-material
       branch: main
       enabled: !ENV [CI, false]
-  - search
-  - mermaid2
 markdown_extensions:
   - toc:
       permalink: true
