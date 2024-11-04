@@ -15,7 +15,7 @@ https://github.com/YapengTian/CCOL-CVPR21
 
 我们首先参考这篇[文章](https://blog.csdn.net/ljtlyk/article/details/129945955)。从4.1看到4.3即可。不要尝试运行任何的 `make.sh` 文件。
 
-一个可能需要改动的地方是在`lib/model/utils/config.py` 的292行（可能不是这一行，注意辨析）改成 `__C.ANCHOR_SCALES = [4,8,16,32]` 。我不确定如果不改会不会有问题（反正我改了）。
+一个可能需要改动的地方是在`lib/model/utils/config.py` 的292行（可能不是这一行，注意辨析）改成 `__C.ANCHOR_SCALES = [4,8,16,32]` 。我不确定如果不改会不会有问题（我在setup之前就修改了）。
 
 其中，在4.3.1编译coco api的时候可能会有如下报错：
 
@@ -89,13 +89,14 @@ rleFrPoly( <RLE*>&Rs._R[i], <const double*> np_poly.data, <unsigned long>(len(np
         if vis:
           im2show = vis_detections(im2show, pascal_classes[j], cls_dets.cpu().numpy(), 0.5)
     ```
+    
+6. 最后的保存npy那一块代码缩进有问题，需要缩进一次。
 
 以下是**可能**需要修改的地方：
 
 1. `fasterRCNN.load_state_dict(checkpoint['model'],strict=False)` 加载模型的地方添加 `strict=False`
-2. 最后的保存npy那一块代码可能缩进有问题，需要缩进一次。
 
-可能还有改动，但是我忘了，但应该没有大问题了，还有问题可以根据报错自己解决一下。
+可能还有改动但是我忘了，如果还有问题请对照demo.py文件来修改。
 
 至此这个模型终于能跑了。
 

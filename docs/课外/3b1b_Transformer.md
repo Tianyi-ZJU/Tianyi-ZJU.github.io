@@ -69,8 +69,8 @@ Transformer中完整的注意力机制由多头注意力组成，即多个注意
 ```mermaid
 graph LR
 
-v["$$v$$"] --Linear--> $$v_1$$ --ReLU--> $$v_2$$ --Linear-->$$v_3$$ --->p(("+"))
-v--->p--->$$v_o$$
+v["v"] --Linear--> v_1 --ReLU--> v_2 --Linear-->v_3 --->p(("+"))
+v--->p--->v_o
 ```
 
 > 仅图示，忽略这里的具体符号
